@@ -11,7 +11,7 @@ resource "aws_api_gateway_integration" "cors_integration" {
   http_method = aws_api_gateway_method.cors_method.http_method
   type        = "MOCK"
   request_templates = {
-    "application/json" = <<EOF
+    application/json = <<EOF
 { "statusCode": 200 }
 EOF
 
@@ -26,7 +26,7 @@ resource "aws_api_gateway_method_response" "cors_method_response" {
   status_code = "200"
 
   response_models = {
-    "application/json" = "Empty"
+    application/json = "Empty"
   }
 
   response_parameters = {
